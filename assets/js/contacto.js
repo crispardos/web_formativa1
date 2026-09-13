@@ -1,7 +1,7 @@
 const form = document.getElementById("form-contacto");
 
 form.addEventListener("submit", function (e) {
-    e.preventDefault(); // SIEMPRE bloquear envío (IE1.2.1)
+    e.preventDefault();
     let valid = true;
     if (!validarNombre()) valid = false;
     if (!validarEmail()) valid = false;
