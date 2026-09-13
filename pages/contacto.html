@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TecnoStore | Contacto</title>
+        <link rel="stylesheet" href="../assets/css/style.css">
+    </head>
+    <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+
+        <header class="bg-slate-900 text-white shadow-md">
+            <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-2">
+                <a href="../index.html" class="flex items-center gap-2">
+                    <img src="../assets/images/logo.svg" alt="Logo de TecnoStore" class="h-8 w-8">
+                    <span class="text-xl font-bold">TecnoStore</span>
+                </a>
+                <nav aria-label="Navegación principal">
+                    <ul class="flex flex-wrap gap-x-4 gap-y-1">
+                        <li><a href="../index.html" class="hover:text-sky-400 transition-colors">Inicio</a></li>
+                        <li><a href="productos.html" class="hover:text-sky-400 transition-colors">Productos</a></li>
+                        <li><a href="registro.html" class="hover:text-sky-400 transition-colors">Registro</a></li>
+                        <li><a href="login.html" class="hover:text-sky-400 transition-colors">Iniciar sesión</a></li>
+                        <li><a href="contacto.html"
+                               class="text-sky-400 font-semibold hover:text-sky-300 transition-colors">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="flex-1">
+
+            <section class="max-w-2xl mx-auto px-4 py-10">
+                <h1 class="text-3xl md:text-4xl font-bold mb-2">Contáctanos</h1>
+                <p class="text-gray-600 mb-8">Escríbenos y te responderemos dentro de 24 horas.</p>
+
+                <form id="form-contacto" class="bg-white rounded-lg shadow p-6 md:p-8 grid gap-5" novalidate>
+
+                    <div>
+                        <label for="nombre" class="block font-medium mb-1">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" class="campo"
+                               placeholder="Ej: María Pérez" autocomplete="name">
+                        <small id="nombre-error" class="text-red-600 text-xs hidden"></small>
+                    </div>
+
+                    <div>
+                        <label for="email" class="block font-medium mb-1">Correo electrónico</label>
+                        <input type="email" id="email" name="email" class="campo"
+                               placeholder="Ej: maria@correo.com" autocomplete="email">
+                        <small id="email-error" class="text-red-600 text-xs hidden"></small>
+                    </div>
+
+                    <div>
+                        <label for="asunto" class="block font-medium mb-1">Asunto</label>
+                        <input type="text" id="asunto" name="asunto" class="campo" list="tipos-asunto"
+                               placeholder="Ej: Consulta" autocomplete="off">
+                        <datalist id="tipos-asunto">
+                            <option value="Consulta"></option>
+                            <option value="Reclamo"></option>
+                            <option value="Sugerencia"></option>
+                            <option value="Soporte técnico"></option>
+                        </datalist>
+                        <small id="asunto-error" class="text-red-600 text-xs hidden"></small>
+                    </div>
+
+                    <div>
+                        <label for="mensaje" class="block font-medium mb-1">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" class="campo resize-y"
+                                  placeholder="Cuéntanos en qué podemos ayudarte..."></textarea>
+                        <p id="contador" class="text-xs text-gray-500 text-right mt-1">0/500</p>
+                        <small id="mensaje-error" class="text-red-600 text-xs hidden"></small>
+                    </div>
+
+                    <div id="exito" class="hidden bg-green-100 border border-green-500 text-green-800 rounded-md p-3"
+                         role="status">
+                        Mensaje enviado.
+                    </div>
+
+                    <button type="submit" class="btn-primary w-full">Enviar mensaje</button>
+
+                </form>
+            </section>
+
+        </main>
+
+        <footer class="bg-slate-900 text-gray-300 text-sm">
+            <div class="max-w-6xl mx-auto px-4 py-8 grid gap-6 md:grid-cols-3">
+                <section>
+                    <h3 class="text-white font-semibold mb-2">TecnoStore</h3>
+                    <p>Tecnología al mejor precio, con despacho a todo Chile.</p>
+                    <p>📍 Av. Siempre Viva 742, Santiago</p>
+                    <p>📞 +56 2 2345 6789</p>
+                    <p>✉️ contacto@tecnostore.cl</p>
+                </section>
+                <nav aria-label="Enlaces del pie de página">
+                    <h3 class="text-white font-semibold mb-2">Enlaces</h3>
+                    <ul class="space-y-1">
+                        <li><a href="../index.html" class="hover:text-sky-400">Inicio</a></li>
+                        <li><a href="productos.html" class="hover:text-sky-400">Productos</a></li>
+                        <li><a href="registro.html" class="hover:text-sky-400">Registro</a></li>
+                        <li><a href="login.html" class="hover:text-sky-400">Iniciar sesión</a></li>
+                        <li><a href="contacto.html" class="hover:text-sky-400">Contacto</a></li>
+                    </ul>
+                </nav>
+                <section>
+                    <h3 class="text-white font-semibold mb-2">Síguenos</h3>
+                    <ul class="space-y-1">
+                        <li><a href="https://instagram.com" target="_blank" rel="noopener" class="hover:text-sky-400">Instagram</a>
+                        </li>
+                        <li><a href="https://facebook.com" target="_blank" rel="noopener" class="hover:text-sky-400">Facebook</a>
+                        </li>
+                        <li><a href="https://x.com" target="_blank" rel="noopener" class="hover:text-sky-400">X</a></li>
+                    </ul>
+                </section>
+            </div>
+            <p class="text-center py-3 border-t border-slate-700">
+                © 2026 TecnoStore — Todos los derechos reservados
+            </p>
+        </footer>
+
+        <script src="../assets/js/contacto.js"></script>
+
+    </body>
+</html>
