@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@layer components {
+  .btn-primary {
+    @apply bg-sky-600 text-white font-medium px-4 py-2 rounded-md hover:bg-sky-700 transition-colors;
+  }
+  .campo {
+    @apply w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500;
+  }
+}
