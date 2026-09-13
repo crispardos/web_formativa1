@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Logo de TecnoStore">
+  <!-- monitor -->
+  <rect x="6" y="10" width="52" height="34" rx="4" fill="#0f172a"/>
+  <rect x="10" y="14" width="44" height="26" rx="2" fill="#0284c7"/>
+  <!-- rayo -->
+  <polygon points="34,17 25,29 31,29 28,39 39,26 33,26" fill="#fde047"/>
+  <!-- pie del monitor -->
+  <rect x="28" y="44" width="8" height="5" fill="#0f172a"/>
+  <rect x="20" y="49" width="24" height="4" rx="2" fill="#0f172a"/>
+  <!-- TS -->
+  <text x="32" y="62" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#0f172a">TS</text>
+</svg>

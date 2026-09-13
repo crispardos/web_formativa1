@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Página de registro de TecnoStore">
+        <title>TecnoStore | Registro</title>
+        <link rel="stylesheet" href="../assets/css/style.css">
+    </head>
+    <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+
+        <header class="bg-slate-900 text-white shadow-md">
+            <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-2">
+                <a href="../index.html" class="flex items-center gap-2">
+                    <span class="text-xl font-bold">TecnoStore</span>
+                </a>
+                <nav aria-label="Navegación principal">
+                    <ul class="flex flex-wrap gap-x-4 gap-y-1">
+                        <li><a href="../index.html" class="hover:text-sky-400 transition-colors">Inicio</a></li>
+                        <li><a href="productos.html" class="hover:text-sky-400 transition-colors">Productos</a></li>
+                        <li><a href="registro.html"
+                               class="text-sky-400 font-semibold hover:text-sky-300 transition-colors">Registro</a></li>
+                        <li><a href="login.html" class="hover:text-sky-400 transition-colors">Iniciar sesión</a></li>
+                        <li><a href="contacto.html" class="hover:text-sky-400 transition-colors">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="flex-1">
+
+            <section class="max-w-2xl mx-auto px-4 py-10">
+                <h1 class="text-3xl md:text-4xl font-bold mb-2">Crea tu cuenta</h1>
+                <p class="text-gray-600 mb-8">Regístrate para comprar y acceder a ofertas exclusivas.</p>
+
+                <form id="form-registro" class="bg-white rounded-lg shadow p-6 md:p-8 grid gap-5" novalidate>
+
+                    <div>
+                        <label for="nombre" class="block font-medium mb-1">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" class="campo"
+                               placeholder="Ej: María Pérez" autocomplete="name">
+                        <small id="nombre-error" class="text-red-600 text-xs hidden"></small>
+                    </div>
+
+                    <div>
+                        <label for="email" class="block font-medium mb-1">Correo electrónico</label>
+                        <input type="email" id="email" name="email" class="campo"
+                               placeholder="Ej: maria@correo.com" autocomplete="email">
+                        <small id="email-error" class="text-red-600 text-xs hidden"></small>
+                    </div>
+
+                    <div>
+                        <label for="telefono" class="block font-medium mb-1">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" class="campo"
+                               placeholder="Ej: 912345678" autocomplete="tel">
+                        <small id="telefono-error" class="text-red-600 text-xs hidden"></small>
+                    </div>
+
+                    <div>
+                        <label for="password" class="block font-medium mb-1">Contraseña</label>
+                        <div class="relative">
+                            <input type="password" id="password" name="password" class="campo pr-20"
+                                   placeholder="Mínimo 8 caracteres" autocomplete="new-password">
+                            <button type="button" id="btn-ver-pass"
+                                    class="absolute right-2 top-1/2 -translate-y-1/2 text-sm text-sky-600 font-medium hover:text-sky-700">
+                                Mostrar
+                            </button>
+                        </div>
+                        <small id="password-error" class="text-red-600 text-xs hidden"></small>
+                    </div>
+
+                    <div>
+                        <label for="confirmar" class="block font-medium mb-1">Confirmar contraseña</label>
+                        <input type="password" id="confirmar" name="confirmar" class="campo"
+                               placeholder="Repite tu contraseña" autocomplete="new-password">
+                        <small id="confirmar-error" class="text-red-600 text-xs hidden"></small>
+                    </div>
+
+                    <div>
+                        <label for="nacimiento" class="block font-medium mb-1">Fecha de nacimiento</label>
+                        <input type="date" id="nacimiento" name="nacimiento" class="campo" autocomplete="bday">
+                        <small id="nacimiento-error" class="text-red-600 text-xs hidden"></small>
+                    </div>
+
+                    <div>
+                        <label for="region" class="block font-medium mb-1">Región</label>
+                        <select id="region" name="region" class="campo">
+                            <option value="">Selecciona...</option>
+                            <option value="metropolitana">Región Metropolitana</option>
+                            <option value="valparaiso">Región de Valparaíso</option>
+                            <option value="biobio">Región del Biobío</option>
+                            <option value="araucania">Región de La Araucanía</option>
+                            <option value="los-lagos">Región de Los Lagos</option>
+                        </select>
+                        <small id="region-error" class="text-red-600 text-xs hidden"></small>
+                    </div>
+
+                    <div>
+                        <label for="comuna" class="block font-medium mb-1">Comuna</label>
+                        <input type="text" id="comuna" name="comuna" class="campo" list="comunas"
+                               placeholder="Ej: Maipú" autocomplete="address-level3">
+                        <datalist id="comunas">
+                            <option value="Maipú"></option>
+                            <option value="Providencia"></option>
+                            <option value="Las Condes"></option>
+                            <option value="La Florida"></option>
+                            <option value="Viña del Mar"></option>
+                            <option value="Concepción"></option>
+                            <option value="Temuco"></option>
+                            <option value="Puerto Montt"></option>
+                        </datalist>
+                        <small id="comuna-error" class="text-red-600 text-xs hidden"></small>
+                    </div>
+
+                    <div>
+                        <label class="flex items-start gap-2">
+                            <input type="checkbox" id="terminos" name="terminos" class="mt-1">
+                            <span class="text-sm">Acepto los <a href="#" class="text-sky-600 hover:underline">términos y condiciones</a></span>
+                        </label>
+                        <small id="terminos-error" class="text-red-600 text-xs hidden"></small>
+                    </div>
+
+                    <div id="exito" class="hidden bg-green-100 border border-green-500 text-green-800 rounded-md p-3"
+                         role="status">
+                        ¡Registro exitoso! Redirigiendo al inicio de sesión...
+                    </div>
+
+                    <button type="submit" class="btn-primary w-full">Registrarme</button>
+
+                    <p class="text-sm text-center text-gray-600">¿Ya tienes cuenta? <a href="login.html"
+                                                                                       class="text-sky-600 hover:underline">Inicia
+                        sesión aquí</a></p>
+
+                </form>
+            </section>
+
+        </main>
+
+        <footer class="bg-slate-900 text-gray-300 text-sm">
+            <div class="max-w-6xl mx-auto px-4 py-8 grid gap-6 md:grid-cols-3">
+                <h2 class="text-white font-semibold mb-2">TecnoStore</h2>
+                <address>
+                    <p>Tecnología al mejor precio, con despacho a todo Chile.</p>
+                    <p>📍 Av. Siempre Viva 742, Santiago</p>
+                    <p>📞 +56 2 2345 6789</p>
+                    <p>✉️ contacto@tecnostore.cl</p>
+                </address>
+                <nav aria-label="Enlaces del pie de página">
+                    <h2 class="text-white font-semibold mb-2">Enlaces</h2>
+                    <ul class="space-y-1">
+                        <li><a href="../index.html" class="hover:text-sky-400">Inicio</a></li>
+                        <li><a href="productos.html" class="hover:text-sky-400">Productos</a></li>
+                        <li><a href="registro.html" class="hover:text-sky-400">Registro</a></li>
+                        <li><a href="login.html" class="hover:text-sky-400">Iniciar sesión</a></li>
+                        <li><a href="contacto.html" class="hover:text-sky-400">Contacto</a></li>
+                    </ul>
+                </nav>
+                <nav aria-label="Enlaces del pie de página">
+                    <h2 class="text-white font-semibold mb-2">Síguenos</h2>
+                    <ul class="space-y-1">
+                        <li><a href="https://instagram.com" target="_blank" rel="noopener" class="hover:text-sky-400">Instagram</a>
+                        </li>
+                        <li><a href="https://facebook.com" target="_blank" rel="noopener" class="hover:text-sky-400">Facebook</a>
+                        </li>
+                        <li><a href="https://x.com" target="_blank" rel="noopener" class="hover:text-sky-400">X</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="text-center py-3 border-t border-slate-700">
+                © 2026 TecnoStore — Todos los derechos reservados
+            </p>
+        </footer>
+
+        <script src="../assets/js/registro.js"></script>
+
+    </body>
+</html>
